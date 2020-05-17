@@ -1,0 +1,27 @@
+{
+	"category" : "GsCsvSupport-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"filePath",
+		"onClient",
+		"file",
+		"isUtf8",
+		"isAnsi",
+		"hasBom",
+		"delimiter",
+		"lineEnding",
+		"lineCount",
+		"lineEndingSize",
+		"lineWithIndexBlock",
+		"buffer",
+		"lastChunk",
+		"firstLineToRead" ],
+	"name" : "CsvReader",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

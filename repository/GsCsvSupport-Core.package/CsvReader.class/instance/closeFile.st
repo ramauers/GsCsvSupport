@@ -1,0 +1,4 @@
+private
+closeFile
+
+	^file close
