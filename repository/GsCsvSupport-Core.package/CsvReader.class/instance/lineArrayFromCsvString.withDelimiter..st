@@ -24,5 +24,8 @@ lineArrayFromCsvString: aString withDelimiter: aChar
 												c := stream next.
 												stream atEnd ifFalse: [string add: c]]]].
 					result add: string]
-				ifFalse: [result add: (stream upTo: aChar) asString]].
+				ifFalse:
+					[result add: (stream upTo: aChar) asString.
+					(stream atEnd and:[stream last == aChar])
+						ifTrue:[result add: String new]]].
 	^result
