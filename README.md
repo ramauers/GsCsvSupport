@@ -1,7 +1,7 @@
 # GsCsvSupport
 Handling of csv-files for GemStone/S
 
-This package currently contains the class CsvReader. A corresponding class CsvWriter may be added in future.
+This package currently contains the classes CsvReader and CsvWriter.
 
 ## CsvReader
 
@@ -42,3 +42,20 @@ Usage of CsvReader is very straightforward and illustrated by the following exam
 
 	^lines
 ```
+
+## CsvWriter
+
+CsvWriter is a self-contained class with no dependencies other than GemStone/S kernel classes.
+
+```smalltalk
+	| csvWriter |
+	csvWriter := CsvWriter newOnServerFile: '~/CsvWriterTest.csv'.
+	csvWriter
+		delimiter: $;; "optional; default is comma"
+		nilString: 'I represent a nil value'; "optional; default is an empty string"
+		beUtf8; "optional; default is not to encode to utf8"
+		openFile.
+	csvWriter addLineArray: #('col1' 'col2' 'col3' 4 5 nil 'Text containing " a quotaion mark').
+	csvWriter closeFile
+```
+
