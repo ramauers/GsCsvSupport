@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'GsCsvSupport-Core'!
+SystemOrganization addCategory: 'GsCsvSupport-Core'!
